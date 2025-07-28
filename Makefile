@@ -39,4 +39,5 @@ docker-clean:
 test:
         kubectl port-forward svc/hextris 30080:80
 
-all: build terraform-init terraform-apply load deploy
+all:
+        build terraform-init terraform-apply load deploy
