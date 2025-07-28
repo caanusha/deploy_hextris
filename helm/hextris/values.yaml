@@ -1,0 +1,10 @@
+image:
+  repository: hextris
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
+
