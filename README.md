@@ -57,8 +57,8 @@ make --version
 1. **Clone this repository**
 
 ```bash
-git clone https://github.com/caanusha/hextris_deployment.git
-cd hextris_deployment
+git clone  https://github.com/caanusha/deploy_hextris.git
+cd deploy_hextris
 ```
 
 2. **Create the Kubernetes cluster and deploy Hextris**
