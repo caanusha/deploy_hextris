@@ -25,7 +25,7 @@ load:
 
 deploy:
         helm upgrade --install $(IMAGE_NAME) $(HELM_CHART_DIR) \
-                --set image.repository=$(IMAGE_NAME),image.tag=$(IMAGE_TAG)
+        --set image.repository=$(IMAGE_NAME),image.tag=$(IMAGE_TAG)
 
 clean:
         helm uninstall $(IMAGE_NAME) || true
@@ -36,6 +36,7 @@ docker-clean:
         -docker ps -a -q --filter ancestor=$(IMAGE_NAME):$(IMAGE_TAG) | xargs -r docker rm -f
         -docker image rm $(IMAGE_NAME):$(IMAGE_TAG)
         -docker volume ls -q --filter label=app=$(IMAGE_NAME) | xargs -r docker volume rm
+
 test:
         kubectl port-forward svc/hextris 30080:80
 
